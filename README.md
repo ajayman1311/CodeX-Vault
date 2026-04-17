@@ -4,6 +4,7 @@ CodeX Vault: Technical Analysis and Briefing
 Executive Summary
 --------------------------------------------------------------------------------
 The CodeX Vault is a high-performance, private cloud storage solution engineered for local network environments. Built on a Flask-based backend with a modern "Glassmorphism" frontend, the system distinguishes itself from traditional uploaders through its use of Chunk-based Sequential Uploading and Persistent Session Management. These core technologies allow the system to handle multi-gigabyte files with zero server overhead and extreme resilience against network fluctuations, server crashes, and power failures. The system is designed to provide a "Google Drive-like" experience within a private, highly scalable infrastructure.
+
 --------------------------------------------------------------------------------
 Core Technical Features and Value Propositions
 --------------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Real-Time Network Sensing
 The frontend maintains constant telemetry on connection quality:
 Monitoring: The system tracks latency and response times for every individual chunk.
 Alerting: If performance drops below a specific threshold, a "Slow Network Warning" is triggered to inform the user in real-time.
+
 --------------------------------------------------------------------------------
 Technology Stack
 --------------------------------------------------------------------------------
@@ -82,12 +84,17 @@ Filename Sanitization: The system uses secure_filename to strip malicious charac
 Directory Isolation: Files are stored in a dedicated vault_files directory that lacks a direct public URL, preventing unauthorized external access.
 
 Thread Isolation: The Waitress server is configured with 12 dedicated threads. This ensures that high-volume uploads by one user do not block access or degrade performance for other users.
+
+
 --------------------------------------------------------------------------------
 Deployment Specifications
 --------------------------------------------------------------------------------
 The system is designed for rapid deployment in both corporate and personal environments.
+
 Dependencies: Requires flask and waitress.
+
 Execution: Launched via python app.py.
+
 Access Points:
 Local: http://localhost:5000
 Network: http://[Your-IP]:5000
