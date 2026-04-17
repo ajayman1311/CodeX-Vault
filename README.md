@@ -1,6 +1,6 @@
 # CodeX-Vault
 CodeX Vault: Technical Analysis and Briefing
-========================================================================
+--------------------------------------------------------------------------------
 Executive Summary
 
 The CodeX Vault is a high-performance, private cloud storage solution engineered for local network environments. Built on a Flask-based backend with a modern "Glassmorphism" frontend, the system distinguishes itself from traditional uploaders through its use of Chunk-based Sequential Uploading and Persistent Session Management. These core technologies allow the system to handle multi-gigabyte files with zero server overhead and extreme resilience against network fluctuations, server crashes, and power failures. The system is designed to provide a "Google Drive-like" experience within a private, highly scalable infrastructure.
@@ -22,22 +22,22 @@ Monitoring: The system tracks latency and response times for every individual ch
 Alerting: If performance drops below a specific threshold, a "Slow Network Warning" is triggered to inform the user in real-time.
 --------------------------------------------------------------------------------
 Technology Stack
-
+--------------------------------------------------------------------------------
 The system utilizes a modern, multi-layered stack designed for production-grade stability and responsive user interaction.
 Layer
 
 
 
-|Technology |Purpose|Purpose|
-|Backend|Python / Flask|Core logic, routing, and file handling.|
-|Server|Waitress|Production-grade, multi-threaded request handling.|
-|Database|JSON (Flat-file)|Lightweight management of configurations.|
-|Frontend|HTML5, CSS3, JavaScript (ES6+)|UI rendering and client-side chunking logic.|
-|Security|Werkzeug Utilities|Filename sanitization and session authentication.|
+| Technology | Purpose | Purpose |
+| Backend | Python / Flask | Core logic, routing, and file handling. |
+| Server | Waitress | Production-grade, multi-threaded request handling. |
+| Database | JSON (Flat-file) | Lightweight management of configurations. |
+| Frontend | HTML5, CSS3, JavaScript (ES6+) | UI rendering and client-side chunking logic. |
+| Security | Werkzeug Utilities | Filename sanitization and session authentication. |
 
 --------------------------------------------------------------------------------
 System Architecture and Workflow
-========================================================================
+--------------------------------------------------------------------------------
 The operational lifecycle of the CodeX Vault is divided into three distinct phases to ensure security and reliability.
 
 Phase 1: Authentication and Access
